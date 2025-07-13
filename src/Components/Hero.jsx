@@ -1,16 +1,24 @@
-
 import heroImg from '../assets/hero-image.png';
 
 function Hero(){
+    // Smooth scroll handler
+    const handleLearnMoreClick = (e) => {
+        e.preventDefault();
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return(
-    <section id="about" className="w-full bg-gray-50 py-80 px-6 md:px-12">
+    <section id="about" className="w-full min-h-screen bg-gradient-to-r from-blue-100 via-white to-blue-50 py-35 px-6 md:px-12">
       {/* Centered Heading */}
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-16">
+      <h1 className="text-6xl md:text-6xl font-bold text-center text-gray-800 mb-16">
         Welcome to Our Platform
       </h1>
 
       {/* Content Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 py-21">
         {/* Left Text Column */}
         <div className="text-center md:text-left">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -20,7 +28,10 @@ function Hero(){
             We help you build modern, responsive, and scalable web applications.
             Our team is dedicated to delivering high-quality code and great user experiences.
           </p>
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+          <button
+            className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+            onClick={handleLearnMoreClick}
+          >
             Learn More
           </button>
         </div>
