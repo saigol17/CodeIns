@@ -1,20 +1,33 @@
-import ServiceCard from './ServiceCard';
-import './Services.css';
-import { FaCode, FaMobileAlt, FaProjectDiagram, FaHeadset } from 'react-icons/fa';
+export default function Services() {
+  return (
+    <section id="services" className="py-20 px-6 md:px-12 bg-white">
+      {/* Heading */}
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+        Our Services
+      </h2>
 
-function Services(){
-    return(
-        <section id ="services" className="services-section">
-            <h2 className="services-heading">Our Services</h2>
-            <div className="services-list">
-                <ServiceCard icon={<FaCode />} title="Web Development" description="Buidling responsive websites and web apps."/>
-                <ServiceCard icon={<FaMobileAlt />} title="App development" description="Creating modern and desktop applications."/>
-                <ServiceCard icon={<FaProjectDiagram />} title="Project Management" description="Managing projects from start to finish."/>
-                <ServiceCard icon={<FaHeadset />} title="Customer Support" description="Providing 24/7 customer support."/>
-            </div>
-        </section>
-    )
+      {/* Services Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20">
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-xl font-semibold mb-2">Web Development</h3>
+          <p className="text-gray-600">Build modern websites & web apps.</p>
+        </div>
+
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-xl font-semibold mb-2">App Development</h3>
+          <p className="text-gray-600">Create mobile or desktop apps.</p>
+        </div>
+
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-xl font-semibold mb-2">Coding Projects</h3>
+          <p className="text-gray-600">Custom programming solutions.</p>
+        </div>
+
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+          <h3 className="text-xl font-semibold mb-2">Support & Maintenance</h3>
+          <p className="text-gray-600">Ongoing updates & assistance.</p>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default Services;
-// This code defines a Services component that displays a list of services offered by a company.

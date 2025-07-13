@@ -1,39 +1,56 @@
-import './ContactUs.css';
-import { FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
-
 export default function ContactUs() {
   return (
-    <section className="contact-section">
-      <h2 className="contact-heading">Contact Us</h2>
-
-      <div className="contact-list">
-        <div className="contact-item">
-          <FaEnvelope className="contact-icon" />
-          <div>
-            <h4>Email</h4>
-            <p>example@email.com</p>
-          </div>
+    <section id="contact" className="py-20 px-6 md:px-12 bg-gray-50">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        
+        {/* Left Column */}
+        <div>
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">
+            Contact Us
+          </h2>
+          <p className="text-lg text-gray-600 mb-4">
+            We’d love to hear from you! Fill out the form and our team will be in touch.
+          </p>
+          <p className="text-gray-500 mb-2">📧 contact@yourcompany.com</p>
+          <p className="text-gray-500">📞 +1 (123) 456-7890</p>
         </div>
 
-        <div className="contact-item">
-          <FaPhoneAlt className="contact-icon" />
+        {/* Right Column - Contact Form */}
+        <form className="bg-white p-6 md:p-8 rounded-lg shadow-lg space-y-6 w-full">
           <div>
-            <h4>Phone</h4>
-            <p>+1 (123) 456-7890</p>
+            <label className="block text-gray-700 font-medium mb-2">Name</label>
+            <input
+              type="text"
+              placeholder="Your name"
+              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+            />
           </div>
-        </div>
 
-        <div className="contact-item">
-          <FaLinkedin className="contact-icon" />
           <div>
-            <h4>LinkedIn</h4>
-            <p>
-              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-                linkedin.com/in/yourprofile
-              </a>
-            </p>
+            <label className="block text-gray-700 font-medium mb-2">Email</label>
+            <input
+              type="email"
+              placeholder="you@example.com"
+              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+            />
           </div>
-        </div>
+
+          <div>
+            <label className="block text-gray-700 font-medium mb-2">Message</label>
+            <textarea
+              rows="5"
+              placeholder="Type your message..."
+              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
     </section>
   );

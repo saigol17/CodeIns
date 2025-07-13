@@ -1,17 +1,20 @@
 import NavBar from './components/NavBar';
-import Hero from './Components/Hero';
+import Hero from './components/Hero';
 import Services from './Components/Services';
-import ContactUs from './components/ContactUs';
+import ContactUs from './Components/ContactUs';
+import Footer from './Components/Footer';
 
 
 function App() {
   return (
-       <div className="container">
+       <div className="min-h-screen bg-white text-gray-800">
 
         <NavBar />
-        <Hero />  
-        <Services />   
+        <Hero />
+        <Services />
         <ContactUs />
+        <Footer />
+
 
       </div>
   );
